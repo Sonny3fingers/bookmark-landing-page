@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+:root {
+  /* Primary colors */
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+  /* Neutral colors */
+  --grayish-blue: hsl(229, 8%, 60%);
+  --veryDark-blue: hsl(229, 31%, 21%);
+}
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+.navbar-brand img {
+  width: 145px;
+  height: auto;
+}
+header #header-img {
+  height: 260px;
+  background: url("../images/illustration-hero.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+header h1 {
+  font-weight: 500 !important;
+}
+header p {
+  color: var(--grayishBlue) !important;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+header .btn {
+  font-family: inherit !important;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+}
+header .btn:first-of-type {
+  background-color: var(--softBlue);
+}
+header .btn:last-of-type {
+  background-color: #fff;
+  color: var(--grayishBlue);
+}
