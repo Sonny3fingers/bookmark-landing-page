@@ -1,9 +1,4 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./components/buttons.scss";
 @import "./layout/navigation.scss";
-
-#header-img {
-  background: url("../images/illustration-hero.svg");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+@import "./layout/header.scss";

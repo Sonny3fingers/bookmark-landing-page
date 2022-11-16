@@ -25,7 +25,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 1px;
   margin: 0;
   outline: 0;
   border: 0;
@@ -62,6 +62,21 @@ nav {
     }
   }
 }
+.hamburger-menu {
+  transition: all 0.3s ease-in;
+  &:hover {
+    span {
+      background-color: hsl(229, 8%, 60%);
+    }
+  }
+  &.is-active {
+    &:hover {
+      span {
+        background-color: hsl(229, 8%, 60%);
+      }
+    }
+  }
+}
 .is-active {
   display: block;
 }
@@ -74,17 +89,18 @@ nav {
   background-color: hsla(229, 31%, 21%, 0.95);
   z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   ul {
     list-style-type: none;
-    margin-top: 90px;
+    margin-top: 105px;
     padding: 0;
     width: 90%;
   }
   li {
     padding: 17.8px;
-    border-top: 0.25px solid rgba(255, 255, 255, 0.5);
+    border-top: 0.25px solid hsl(229, 8%, 60%);
     display: flex;
     justify-content: center;
   }
@@ -94,6 +110,66 @@ nav {
     text-transform: uppercase;
     font-size: 1.28rem;
     letter-spacing: 0.2rem;
+    transition: all 0.3s ease-in;
+    &:hover {
+      color: hsl(0, 94%, 66%);
+    }
+  }
+}
+.mobile-socials {
+  ul {
+    display: flex;
+  }
+  li {
+    border: none;
+  }
+  svg {
+    transition: all 0.3s ease-in;
+    &:hover {
+      path {
+        fill: hsl(0, 94%, 66%);
+      }
+    }
+  }
+}
+.menu-for-sm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 67%;
+  height: 42px;
+  ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 0.2rem;
+    &:last-of-type {
+      a {
+        color: white;
+        font-size: 0.85rem;
+        transition: all 0.3s ease-in;
+        &:hover {
+          color: hsl(0, 94%, 66%);
+        }
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.89rem;
+    font-weight: bold;
+    color: hsla(229, 31%, 21%, 0.75);
+    letter-spacing: 0.12rem;
+    transition: all 0.3s ease-in;
+    &:hover {
+      color: hsl(0, 94%, 66%);
+    }
   }
 }
 .show-mobile-menu {
@@ -118,8 +194,26 @@ nav {
     top: -1000px;
   }
 }
+@media screen and (max-width: 576px) {
+  .hide-for-xsm {
+    display: none;
+  }
+}
 @media screen and (min-width: 576px) {
   .hide-for-sm {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-for-sm {
+    ul {
+      justify-content: end;
+    }
+    li {
+      margin-right: 50px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 }

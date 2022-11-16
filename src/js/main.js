@@ -2,10 +2,21 @@
 import "../scss/styles.scss";
 // Import all of Bootstrap's JS
 import * as bootstrap from "bootstrap";
+// import hero image
+import heroImage from "../images/illustration-hero.svg";
 
 let hamburgerMenu = document.querySelector(".hamburger-menu");
 let logo = document.querySelector(".logo");
 const mobileMenu = document.querySelector(".mobile-menu");
+const heroImageDIV = document.querySelector(".hero-image");
+
+// Add hero image
+window.addEventListener("DOMContentLoaded", () => {
+  const image = document.createElement("img");
+  image.src = heroImage;
+  image.classList.add("img-fluid");
+  heroImageDIV.append(image);
+});
 // Check for window resize and remove all reset all classes for mobile navigation
 window.addEventListener("resize", () => {
   if (window.innerWidth > 576) {
