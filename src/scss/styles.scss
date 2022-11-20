@@ -1,4 +1,6 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./abstracts/variables.scss";
+@import "./core/typography.scss";
 @import "./components/buttons.scss";
 @import "./components/slider.scss";
 @import "./layout/navigation.scss";

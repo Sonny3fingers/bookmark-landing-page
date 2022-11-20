@@ -1,12 +1,8 @@
-.features {
-  overflow: hidden;
-}
 .features-list {
   list-style-type: none;
 }
 .features-item {
-  border-top: 1px solid hsl(229, 8%, 60%);
-  position: relative;
+  border-top: 1px solid $grayishBlue;
   cursor: pointer;
   transition: all 0.3s ease-in;
   &.active {
@@ -15,7 +11,7 @@
       content: "";
       width: 50%;
       height: 3px;
-      background-color: hsl(0, 94%, 66%);
+      background-color: $softRed;
       margin: auto;
       display: flex;
       position: absolute;
@@ -24,40 +20,29 @@
       transform: translateX(-50%);
     }
     &:hover {
-      color: black;
+      color: $veryDarkBlue;
     }
   }
   &:last-child {
-    border-bottom: 1px solid hsl(229, 8%, 60%);
+    border-bottom: 1px solid $grayishBlue;
   }
   &:hover {
-    color: hsl(0, 94%, 66%);
+    color: $softRed;
   }
 }
 @media screen and (min-width: 768px) {
   .features-list {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $grayishBlue;
   }
   .features-item {
     border: none;
+    &.active {
+      &::after {
+        width: 100%;
+      }
+    }
     &:last-child {
       border-bottom: none;
     }
-  }
-}
-@media screen and (min-width: 992px) {
-  .features-description {
-    width: 60%;
-    margin: auto;
-  }
-  .features-list {
-    width: 70%;
-    margin: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .features-description {
-    width: 50%;
-    margin: auto;
   }
 }
