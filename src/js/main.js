@@ -7,6 +7,10 @@ import heroImage from "../images/illustration-hero.svg";
 import featuresImage1 from "../images/illustration-features-tab-1.svg";
 import featuresImage2 from "../images/illustration-features-tab-2.svg";
 import featuresImage3 from "../images/illustration-features-tab-3.svg";
+import cardImgChrome from "../images/logo-chrome.svg";
+import cardImgFirefox from "../images/logo-firefox.svg";
+import cardImgOpera from "../images/logo-opera.svg";
+import cardImgDots from "../images/bg-dots.svg";
 
 let hamburgerMenu = document.querySelector(".hamburger-menu");
 let logo = document.querySelector(".logo");
@@ -18,6 +22,14 @@ const featuresImgDOM_1 = document.querySelector(".features-img-1");
 const featuresImgDOM_2 = document.querySelector(".features-img-2");
 const featuresImgDOM_3 = document.querySelector(".features-img-3");
 const featuresSlides = document.querySelectorAll(".slide");
+const cardImgContainerChrome = document.getElementById(
+  "cardImgContainerChrome"
+);
+const cardImgContainerFirefox = document.getElementById(
+  "cardImgContainerFirefox"
+);
+const cardImgContainerOpera = document.getElementById("cardImgContainerOpera");
+const cardBodyImages = document.querySelectorAll(".cardBodyContainerImg");
 
 // features list add active class to item
 featuresList.addEventListener("click", (e) => {
@@ -41,7 +53,14 @@ window.addEventListener("DOMContentLoaded", () => {
   provideDOMImage(featuresImage1, featuresImgDOM_1);
   provideDOMImage(featuresImage2, featuresImgDOM_2);
   provideDOMImage(featuresImage3, featuresImgDOM_3);
+  provideDOMImage(cardImgChrome, cardImgContainerChrome);
+  provideDOMImage(cardImgFirefox, cardImgContainerFirefox);
+  provideDOMImage(cardImgOpera, cardImgContainerOpera);
+  cardBodyImages.forEach((cardBodyImg) => {
+    provideDOMImage(cardImgDots, cardBodyImg);
+  });
 });
+
 // provide DOM images
 function provideDOMImage(img, elementDOM) {
   const image = document.createElement("img");

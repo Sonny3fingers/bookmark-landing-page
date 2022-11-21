@@ -137,7 +137,7 @@
     <section class="features text-center py-5 overflow-hidden">
       <div class="py-4 py-md-2 px-sm-5">
         <div class="container px-md-5 pb-md-0 pb-lg-4">
-          <h2 class="fw-bold pb-1 pb-md-3 display-6">Features</h2>
+          <h4 class="fw-bold pb-1 pb-md-3 display-6">Features</h4>
           <p
             class="pb-3 px-lg-0 pb-md-5 fw-light text-muted lead col-md-10 col-lg-6 d-md-flex m-md-auto align-items-center justify-content-center"
           >
@@ -226,20 +226,183 @@
         </div>
       </div>
     </section>
-    <h1>BSBSBSBS</h1>
-    <!-- <section class="features">
-      <h1>Features</h1>
-      <ul id="list">
-        <li class="item 1 active">item 1</li>
-        <li class="item 2">item 2</li>
-        <li class="item 3">item 3</li>
-      </ul>
-      <div class="slider-container">
-        <div class="slide 1 active" id="item 1">slide 1</div>
-        <div class="slide 2" id="item 2">slide 2</div>
-        <div class="slide 3" id="item 3">slide 3</div>
+    <!-- Download section -->
+    <section class="cta-download mb-5">
+      <div class="container px-4 px-lg-5">
+        <div class="text-center mb-md-3">
+          <h3 class="pb-1 fw-bold mb-md-3">Download the extension</h3>
+          <p class="pb-2 col-md-6 m-md-auto">
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favorite you’d like us to prioritize.
+          </p>
+        </div>
+        <!-- Cards group -->
+        <div
+          class="row mt-md-5 d-md-flex align-items-center justify-content-md-evenly"
+        >
+          <!-- Card 1 -->
+          <div class="card pt-5 pb-3 mb-3 text-center shadow col-md-4 col-lg-3">
+            <div class="card-img pb-3" id="cardImgContainerChrome">
+              <!-- <img src="" alt="card-image" /> -->
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fs-5 fw-bold">Add to Chrome</h5>
+              <p class="pb-1">Minimum version 62</p>
+              <div class="cardBodyContainerImg pb-4">
+                <!-- <img src="" alt="card img dots"  /> -->
+              </div>
+              <button type="button" class="btn btn-primary p-3">
+                Add & Install Extension
+              </button>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card pt-5 pb-3 mb-3 text-center shadow col-md-4 col-lg-3">
+            <div class="card-img pb-3" id="cardImgContainerFirefox"></div>
+            <div class="card-body">
+              <h5 class="card-title fs-5 fw-bold">Add to Firefox</h5>
+              <p class="pb-1">Minimum version 62</p>
+              <div class="cardBodyContainerImg pb-4"></div>
+              <button type="button" class="btn btn-primary p-3">
+                Add & Install Extension
+              </button>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card pt-5 pb-3 mb-3 text-center shadow col-md-4 col-lg-3">
+            <div class="card-img pb-3" id="cardImgContainerOpera"></div>
+            <div class="card-body">
+              <h5 class="card-title fs-5 fw-bold">Add to Opera</h5>
+              <p class="pb-1">Minimum version 62</p>
+              <div class="cardBodyContainerImg pb-4"></div>
+              <button type="button" class="btn btn-primary p-3">
+                Add & Install Extension
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </section> -->
+    </section>
+    <!-- Questions accordion -->
+    <section class="questions py-5" id="questions">
+      <div class="container col-md-8 col-lg-6">
+        <div class="py-3 px-2 text-center">
+          <h3 class="fw-bold pb-2">Frequently Asked Questions</h3>
+          <p>
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+        </div>
+        <div class="accordion accordion-flush py-4" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item border-top py-md-1 py-lg-2">
+            <h4 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                What is Bookmark?
+              </button>
+            </h4>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                tincidunt justo eget ultricies fringilla. Phasellus blandit
+                ipsum quis quam ornare mattis.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item py-md-1 py-lg-2">
+            <h4 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                How can I request a new browser?
+              </button>
+            </h4>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                luctus eros aliquet convallis ultricies. Mauris augue massa,
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
+                aliquet convallis ultricies. Mauris augue massa, ultricies non
+                ligula. Suspendisse imperdiet.
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item py-md-1 py-lg-2">
+            <h4 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                Is there a mobile app?
+              </button>
+            </h4>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Sed consectetur quam id neque fermentum accumsan. Praesent
+                luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                Cras in ligula quis est pharetra mattis sit amet pharetra purus.
+                Sed sollicitudin ex et ultricies bibendum.
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item border-bottom py-md-1 py-lg-2">
+            <h4 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+                What about other Chromium browsers?
+              </button>
+            </h4>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                gravida pellentesque non ut velit. More Info 35,000+ already
+                joined Stay up-to-date with what we’re doing Contact Us Features
+                Pricing Contact
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Features Pricing Contact Login A Simple Bookmark Manager A clean and simple
     interface to organize your favourite websites. Open a new browser tab and
     see your sites load instantly. Try it for free. Get it on Chrome Get it on

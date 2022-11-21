@@ -1,0 +1,19 @@
+.questions {
+  h3 {
+    font-size: 1.5rem;
+    color: $veryDarkBlue;
+  }
+  p {
+    color: $grayishBlue;
+  }
+}
+@media screen and (min-width: 992px) {
+  .questions {
+    h3 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
