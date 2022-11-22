@@ -21,6 +21,22 @@
     border-color: $softRed;
   }
 }
+.cta-button-newsletter {
+  background-color: $softRed;
+  color: white;
+  padding: 9px 12px;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: white;
+    color: $softRed;
+    outline: 2px solid $softRed;
+    box-sizing: border-box;
+  }
+}
 @media screen and (min-width: 768px) {
   .cta-button {
     padding: 12px 32px;

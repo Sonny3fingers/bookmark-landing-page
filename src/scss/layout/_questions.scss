@@ -6,6 +6,11 @@
   p {
     color: $grayishBlue;
   }
+  button {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: $veryDarkBlue;
+  }
 }
 @media screen and (min-width: 992px) {
   .questions {
@@ -13,6 +18,9 @@
       font-size: 1.8rem;
     }
     p {
+      font-size: 1.3rem;
+    }
+    button {
       font-size: 1.3rem;
     }
   }

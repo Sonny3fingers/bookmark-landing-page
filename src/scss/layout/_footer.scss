@@ -1,0 +1,34 @@
+footer {
+  background-color: $veryDarkBlue;
+  .links {
+    a {
+      color: $grayishBlue;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $softRed;
+      }
+    }
+  }
+}
+.footer-logo {
+  width: 150px;
+  height: 25px;
+  background: url("../images/footer-logo.svg");
+  background-repeat: no-repeat;
+}
+.socials-icon {
+  width: 25px;
+  height: 25px;
+}
+.facebook {
+  background: url("../images/icon-facebook.svg");
+  background-repeat: none;
+  background-position: center center;
+  background-size: cover;
+}
+.twitter {
+  background: url("../images/icon-twitter.svg");
+  background-repeat: none;
+  background-position: center center;
+  background-size: cover;
+}
