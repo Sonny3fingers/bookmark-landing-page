@@ -11,14 +11,19 @@ footer {
   }
 }
 .footer-logo {
-  width: 150px;
-  height: 25px;
+  width: 9.375rem;
+  height: 1.5625rem;
   background: url("../images/footer-logo.svg");
   background-repeat: no-repeat;
 }
 .socials-icon {
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 20%;
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: $softRed;
+  }
 }
 .facebook {
   background: url("../images/icon-facebook.svg");

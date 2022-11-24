@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+  mode: "production",
   entry: "./src/js/main.js",
   output: {
     filename: "main.js",
@@ -36,7 +37,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg$/,
+        test: /\.svg/,
         type: "asset/inline",
       },
     ],
