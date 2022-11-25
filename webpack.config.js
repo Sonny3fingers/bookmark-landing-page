@@ -1,7 +1,13 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
+const webpack = require("webpack");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/js/main.js",
+  entry: "./src/main.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
@@ -10,9 +16,18 @@ module.exports = {
     static: path.resolve(__dirname, "dist"),
     port: 8080,
     hot: true,
+    open: true,
   },
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
       {
         test: /\.(scss)$/,
         use: [
@@ -41,4 +56,15 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+      filename: "index.html",
+    }),
+    new BundleAnalyzerPlugin({
+      generateStatsFile: true,
+    }),
+    new MiniCssExtractPlugin(),
+    new CleanWebpackPlugin(),
+  ],
 };
