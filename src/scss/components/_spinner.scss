@@ -1,0 +1,8 @@
+.preloader-wrapper {
+  z-index: 100;
+  transition: fade-out-animation 0.6s ease-out;
+}
+.fade-out-animation {
+  opacity: 0;
+  visibility: hidden;
+}

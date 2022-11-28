@@ -1,7 +1,9 @@
 // Import our custom CSS
 import "./scss/styles.scss";
 // Import all of Bootstrap's JS
-import "bootstrap";
+// import * as bootstrap from "bootstrap";
+// import "bootstrap/js/dist/util";
+import "bootstrap/js/dist/collapse";
 
 let hamburgerMenu = document.querySelector(".hamburger-menu");
 let logo = document.querySelector(".logo");
@@ -9,6 +11,14 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const featuresList = document.querySelector(".features-list");
 const featuresItems = featuresList.querySelectorAll(".features-item");
 const featuresSlides = document.querySelectorAll(".slide");
+const preloaderWrapper = document.querySelector(".preloader-wrapper");
+
+// Window loaded
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    preloaderWrapper.classList.add("fade-out-animation");
+  }, 1000);
+});
 
 // features list add active class to item
 featuresList.addEventListener("click", (e) => {

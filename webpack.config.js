@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin =
+//   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const webpack = require("webpack");
@@ -11,6 +11,8 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    asyncChunks: true,
+    clean: true,
   },
   devServer: {
     static: path.resolve(__dirname, "dist"),
@@ -61,9 +63,9 @@ module.exports = {
       template: "src/index.html",
       filename: "index.html",
     }),
-    new BundleAnalyzerPlugin({
-      generateStatsFile: true,
-    }),
+    // new BundleAnalyzerPlugin({
+    //   generateStatsFile: false,
+    // }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
   ],

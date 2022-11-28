@@ -11,12 +11,8 @@ module.exports = {
   output: {
     filename: "[contenthash].js",
     path: path.resolve(__dirname, "dist"),
+    asyncChunks: true,
   },
-  // devServer: {
-  //   static: path.resolve(__dirname, "dist"),
-  //   port: 8080,
-  //   hot: true,
-  // },
   module: {
     rules: [
       {
