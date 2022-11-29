@@ -1,6 +1,4 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -55,9 +53,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html",
       filename: "index.html",
-    }),
-    new BundleAnalyzerPlugin({
-      generateStatsFile: true,
     }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
