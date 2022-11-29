@@ -1,13 +1,12 @@
 // Import our custom CSS
 import "./scss/styles.scss";
-// Import all of Bootstrap's JS
-// import * as bootstrap from "bootstrap";
-// import "bootstrap/js/dist/util";
-import "bootstrap/js/dist/collapse";
+// import bootstrap collapse plugin for accordion
+import "bootstrap/js/dist/collapse.js";
 
 let hamburgerMenu = document.querySelector(".hamburger-menu");
 let logo = document.querySelector(".logo");
 const mobileMenu = document.querySelector(".mobile-menu");
+const mobileMenuList = document.querySelector(".mobile-menu-list");
 const featuresList = document.querySelector(".features-list");
 const featuresItems = featuresList.querySelectorAll(".features-item");
 const featuresSlides = document.querySelectorAll(".slide");
@@ -15,11 +14,8 @@ const preloaderWrapper = document.querySelector(".preloader-wrapper");
 
 // Window loaded
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    preloaderWrapper.classList.add("fade-out-animation");
-  }, 1000);
+  preloaderWrapper.classList.add("fade-out-animation");
 });
-
 // features list add active class to item
 featuresList.addEventListener("click", (e) => {
   if (!e.target.classList.contains("active")) {
@@ -55,6 +51,17 @@ hamburgerMenu.addEventListener("click", () => {
     // Prevent scrolling
     document.body.style.overflowY = "hidden";
   } else {
+    mobileMenu.classList.add("hide-mobile-menu");
+    mobileMenu.classList.remove("show-mobile-menu");
+    // Enable scrolling
+    document.body.style.overflowY = "visible";
+  }
+});
+// Mobile menu list clickable
+mobileMenuList.addEventListener("click", (e) => {
+  if (e.target.nodeName === "A") {
+    hamburgerMenu.classList.toggle("is-active");
+    logo.classList.toggle("logo-mobile");
     mobileMenu.classList.add("hide-mobile-menu");
     mobileMenu.classList.remove("show-mobile-menu");
     // Enable scrolling

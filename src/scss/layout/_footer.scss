@@ -23,6 +23,7 @@ footer {
   transition: all 0.3s ease-in;
   &:hover {
     background-color: $softRed;
+    border: 2px solid $softRed;
   }
 }
 .facebook {
